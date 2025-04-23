@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khám phá Việt Nam</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding-top: 110px; /* Khoảng trống ban đầu cho header và menu cố định */
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+            transition: padding-top 0.3s ease;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            z-index: 100;
+            transition: padding 0.3s ease, font-size 0.3s ease;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px; /* Giảm khoảng cách dưới tiêu đề */
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.8;
+            margin-bottom: 10px; /* Thêm khoảng cách dưới mô tả */
+        }
+
+        nav.menu {
+            position: fixed; /* Cố định menu dưới header */
+            top: 60px; /* Đặt vị trí ngay dưới header (40px padding + 20px h1 margin + 0px p margin) */
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 15px 0;
+            text-align: center;
+            z-index: 99; /* Đảm bảo dưới header nhưng trên nội dung */
+            transition: padding 0.3s ease, top 0.3s ease; /* Thêm transition cho top */
+        }
+
+        nav.menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: font-size 0.3s ease;
+        }
+
+        nav.menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+        }
+
+        header.scrolled h1 {
+            font-size: 2em;
+            margin-bottom: 2px;
+        }
+
+        header.scrolled p {
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+
+        nav.menu.scrolled {
+            padding: 5px 0;
+            top: 40px; /* Điều chỉnh vị trí menu khi header thu nhỏ (20px padding) */
+        }
+
+        nav.menu.scrolled a {
+            font-size: 1.5em;
+            padding: 5px 10px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top: 30px; /* Khoảng cách từ menu đến nội dung */
+        }
+
+        .section-title {
+            text-align: center;
+            color: #28a745;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .content-section {
+            background-color: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .content-section p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .content-section ul {
+            padding-left: 20px;
+        }
+
+        .content-section li {
+            margin-bottom: 10px;
+        }
+
+        .image-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="mainHeader">
+        <h1>Chào !!!</h1>
+    </header>
+
+    <nav class="menu" id="mainMenu">
+        <a href="#gioithieu">Giới thiệu</a>
+        <a href="#uudiem">Văn hóa</a>
+        <a href="#nhuocdiem">Ẩm thực</a>
+    </nav>
+
+    <div class="container">
+        <section id="gioithieu" class="content-section">
+            <h2 class="section-title">Giới thiệu về nhân vật</h2>
+            <img src="honkai-star-rail-rappa.jpg" alt="Pappa" width="90%">
+            <p>Rappa được nhà phát hành thiết kế như một nhân vật Hybrid đa năng. Cô nàng này có thể linh hoạt đảm nhận vai trò DPS hoặc Support tùy vào cách xây dựng của người chơi. Thậm chí, nhờ khả năng gây sát thương lớn và hỗ trợ hiệu quả cho đồng đội, cô thường trở thành lựa chọn lý tưởng trong nhiều đội hình khác nhau từ tấn công mạnh mẽ đến kiểm soát chiến thuật.
+        </section>
+
+        <section id="uudiem" class="content-section">
+            <h2 class="section-title">Uư điểm</h2>
+            
+                <p>Gây sát thương lớn: Với kỹ năng gây sát thương diện rộng và sát thương bùng nổ cao, cô nàng này được xem là nhân vật có khả năng kết liễu nhiều kẻ địch cùng lúc.</p>
+                <p>Đa dụng trong đội hình: Khả năng vừa gây sát thương vừa hỗ trợ (tăng tốc độ hoặc giảm kháng nguyên tố của kẻ địch) giúp nhân vật dễ dàng phối hợp với nhiều vị trí, vai trò khác trong quá trình thi đấu.</p>
+                <p>Hiệu ứng khống chế: Một số kỹ năng của nhân vật có thể làm chậm hoặc làm tê liệt kẻ địch. Điều này giúp người chơi có thể tạo ra các lợi thế để kiểm soát trận đấu và giành chiến thắng.</p>
+            
+        </section>
+
+        <section id="nhuocdiem" class="content-section">
+            <h2 class="section-title">Nhược điểm</h2>
+            <p>Phụ thuộc vào kỹ năng và trang bị: Sức mạnh của Rappa phần lớn đến từ việc tối ưu hóa thánh di vật và vũ khí. Nếu không có trang bị phù hợp, hiệu quả của nhân vật sẽ giảm đáng kể.</p>
+            <p>Tốn năng lượng: Kỹ năng của cô nàng này thường yêu cầu nhiều năng lượng, đòi hỏi đội hình phải có nhân vật hỗ trợ phục hồi nhanh.</p>
+            <p>Phòng thủ yếu: Cô nàng này cũng có khả năng chịu đòn thấp, dễ bị hạ gục nếu không được bảo vệ tốt.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; honkai star rail.</p>
+    </footer>
+
+    <script>
+        const header = document.getElementById('mainHeader');
+        const menu = document.getElementById('mainMenu');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+                menu.classList.add('scrolled');
+                document.body.style.paddingTop = (header.offsetHeight + menu.offsetHeight) + 'px';
+            } else {
+                header.classList.remove('scrolled');
+                menu.classList.remove('scrolled');
+                document.body.style.paddingTop = '110px';
+            }
+        });
+    </script>
+<button onclick="history.back()">Quay về</button>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thay thế đoạn văn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 30px;
+    }
+    #container {
+      background-color: #e6f2ff;
+      border: 2px solid #3399ff;
+      padding: 20px;
+    }
+    p, div {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 18px;
+      font-size: 16px;
+      background-color: #3399ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #287acc;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <p id="p1">📌 Lúc đầu</p>
+    <p id="p2">📌 Lúc sau bị thay thế.</p>
+  </div>
+
+  <button onclick="changenode()">Thay đoạn văn</button>
+
+  <script>
+    function changenode() {
+      var node = document.createElement('div');
+      node.innerText = "✅ Đã được thay thế thành công!";
+      var x = document.getElementById('container');
+      var y = document.getElementById('p2');
+      x.replaceChild(node, y);
+    }
+  </script>
+<button onclick="history.back()">Quay về</button>
+
+
+</body>
+</html>

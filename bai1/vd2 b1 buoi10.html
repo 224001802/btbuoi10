@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Kỹ Năng Công Việc</title>
+</head>
+<body>
+
+  <h2>Những kỹ năng cần thiết cho công việc</h2>
+
+  <p>Kỹ năng mềm là rất quan trọng.</p>
+  <p class="skill">Giao tiếp hiệu quả</p>
+  <p class="skill">Quản lý thời gian</p>
+  <p class="skill">Làm việc nhóm</p>
+
+  <div id="output"></div>
+
+  <script>
+    var x = document.getElementsByClassName("skill");
+    document.getElementById("output").innerHTML =
+      '👉 Kỹ năng đầu tiên trong danh sách là: ' + x[1].innerHTML;
+  </script>
+<button onclick="history.back()">Quay về</button>
+
+</body>
+</html>

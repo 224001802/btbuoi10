@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Món Ăn Yêu Thích</title>
+</head>
+<body>
+
+  <h2>Danh sách món ăn yêu thích</h2>
+
+  <p>Bún bò Huế</p>
+  <p>Phở Hà Nội</p>
+  <p>Cơm tấm Sài Gòn</p>
+
+  <p id="output"></p>
+
+  <script>
+    var monAn = document.getElementsByTagName("p");
+    document.getElementById("output").innerHTML =
+      "👉 Món ăn thứ hai trong danh sách là: " + monAn[0].innerHTML;
+  </script>
+ <button onclick="history.back()">Quay về</button>
+ >
+  
+</body>
+</html>

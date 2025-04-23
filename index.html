@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Personal Web</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      scroll-behavior: smooth;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background-color: #444;
+      padding-top: 20px;
+      transition: left 0.3s;
+      overflow-y: auto;
+    }
+
+    .sidebar a, .sidebar .submenu a {
+      display: block;
+      color: white;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+    .sidebar a:hover, .sidebar .submenu a:hover {
+      background-color: #555;
+    }
+
+    .submenu {
+      display: none;
+      background-color: #555;
+    }
+
+    .submenu a {
+      padding-left: 30px;
+    }
+
+    .sidebar .has-submenu.active + .submenu {
+      display: block;
+    }
+
+    .content {
+      margin-left: 220px;
+      padding: 80px 20px 20px;
+    }
+
+    section {
+      padding: 60px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        left: -200px;
+      }
+
+      .sidebar.active {
+        left: 0;
+      }
+
+      .content {
+        margin-left: 0;
+      }
+    }
+
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bài 3</h1>
+    <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+  </header>
+
+  <nav class="sidebar" id="sidebar">
+    <a href="#section1" class="has-submenu" onclick="toggleSubmenu(event)">Bài 1 ▾</a>
+    <div class="submenu">
+      <a href="bai1/vd1 b1 buoi10.html">Ví dụ 1.1</a>
+      <a href="bai1/vd2 b1 buoi10.html">Ví dụ 1.2</a>
+      <a href="bai1/vd trang 12 buoi10.html">Ví dụ 1.3</a>
+      <a href="bai1/vd trang 13 buoi10.html">Ví dụ 1.4</a>
+      <a href="bai1/vd trang 14 buoi10.html">Ví dụ 1.5</a>
+      <a href="bai1/vd trang16 buoi10.html">Ví dụ 1.6</a>
+      <a href="bai1/vd trang 17 buoi10.html">Ví dụ 1.7</a>
+      <a href="bai1/vd trang 18 buoi10.html">Ví dụ 1.8</a>
+      <a href="bai1/vd trang 19 buôi10.html">Ví dụ 1.9</a>
+      <a href="bai1/vd trang 22 buoi 10.html">Ví dụ 1.10</a>
+      <a href="bai1/vd trang 25 buoi10.html">Ví dụ 1.11</a>
+    </div>
+    <a href="bai2/index.html">Bài 2</a>
+  </nav>
+
+  <div class="content">
+    <section>
+      <img src="a.webp" alt="Nội dung chính" style="width: 70%; height: auto; display: block; margin: 0 auto;">
+    </section>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+
+    function toggleSubmenu(event) {
+      event.preventDefault();
+      const submenuLink = event.target;
+      submenuLink.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
